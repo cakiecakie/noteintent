@@ -2,6 +2,7 @@ package com.cakiecakie.noteintent;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -22,6 +23,7 @@ public class NoteFragment extends Fragment {
     private Button mDateButton;
     private CheckBox mSolvedCheckBox;
     private static final String ARG_NOTE_ID = "note_id";
+    private static final String DIALOG_DATE = "DialogDate";
 
     public static NoteFragment newInstance(UUID noteId) {
         Bundle args = new Bundle();
@@ -63,7 +65,15 @@ public class NoteFragment extends Fragment {
         });
         mDateButton = (Button) v.findViewById(R.id.note_date);
         mDateButton.setText(mNote.getDate().toString());
-        mDateButton.setEnabled(false);//确保不会响应点击事件
+        //mDateButton.setEnabled(false);//确保不会响应点击事件
+        mDateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getFragmentManager();
+                DatePickerFragment dialog = new DatePickerFragment();
+                dialog.show(fm, DIALOG_DATE);//使用fragment manager来显示dialog fragment，添加一个特定的tag
+            }
+        });
 
         mSolvedCheckBox = (CheckBox) v.findViewById(R.id.note_solved);
         mSolvedCheckBox.setChecked(mNote.isSolved());
@@ -73,6 +83,7 @@ public class NoteFragment extends Fragment {
                 mNote.setSolved(isChecked);
             }
         });
+
         return v;
     }
 
