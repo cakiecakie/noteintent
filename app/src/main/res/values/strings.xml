@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NoteIntent</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="note_title_hint">add new note</string>
+    <string name="note_title_label">Title</string>
+    <string name="note_detail_label">Details</string>
+    <string name="note_solved_label">Solved</string>
+    <string name="title_activity_note_list">NoteListActivity</string>
+</resources>
