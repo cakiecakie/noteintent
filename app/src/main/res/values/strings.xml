@@ -8,4 +8,5 @@
     <string name="note_detail_label">Details</string>
     <string name="note_solved_label">Solved</string>
     <string name="title_activity_note_list">NoteListActivity</string>
+    <string name="title_activity_note_pager">NotePagerActivity</string>
 </resources>

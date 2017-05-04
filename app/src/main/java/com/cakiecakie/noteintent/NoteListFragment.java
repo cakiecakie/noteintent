@@ -80,7 +80,7 @@ public class NoteListFragment extends Fragment {
 
         @Override
         public void onClick(View v) {
-            Intent intent = NoteActivity.createIntent(getActivity(), mNote.getId());
+            Intent intent = NotePagerActivity.newIntent(getActivity(), mNote.getId());
             startActivity(intent);
         }
     }
