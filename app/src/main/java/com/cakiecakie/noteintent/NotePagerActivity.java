@@ -46,6 +46,12 @@ public class NotePagerActivity extends FragmentActivity {
                 return mNotes.size();
             }
         });
+        for (int i = 0; i < mNotes.size(); i++) {
+            if (mNotes.get(i).getId().equals(noteId)) {
+                mViewPager.setCurrentItem(i);
+                break;
+            }
+        }
     }
 
 }
