@@ -10,4 +10,8 @@
     <string name="title_activity_note_list">NoteListActivity</string>
     <string name="title_activity_note_pager">NotePagerActivity</string>
     <string name="date_picker_title">Date of note</string>
+    <string name="new_note">New Note</string>
+    <string name="show_subtitle">Show Subtitle</string>
+    <string name="hide_subtitle">Hide subtitle</string>
+    <string name="subtitle_format">%1$s notes</string>
 </resources>

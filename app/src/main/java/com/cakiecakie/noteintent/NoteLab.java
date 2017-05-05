@@ -23,13 +23,7 @@ public class NoteLab {
 
     private NoteLab(Context context) {
         mNotes = new ArrayList<>();
-        //test
-        for (int i = 0; i < 100; i++) {
-            Note note = new Note();
-            note.setTitle("Note #" + i);
-            note.setSolved(i % 2 == 0);
-            mNotes.add(note);
-        }
+
     }
 
     public List<Note> getNotes() {
@@ -43,5 +37,9 @@ public class NoteLab {
             }
         }
         return null;
+    }
+
+    public void addNote(Note note) {
+        mNotes.add(note);
     }
 }
